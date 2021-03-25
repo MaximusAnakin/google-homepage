@@ -2,80 +2,65 @@
 <html>
 <head>
 <style>
-    * {
-        box-sizing: border-box;
-        padding: 0;
+    body {
         margin: 0;
+        padding: 0;
+        font-size: 14px;
+        font-family: arial,sans-serif;
+        color: #222;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    a {
+        text-decoration: none;
+        color: #70757a;
+        padding: 15px;
     }
     .topmenu {
-        grid-area: header;
-        grid-column-start: 3;
-        grid-column-end: 4;
-        text-align: end;
-        padding: 10px;
+        display: flex;
+        justify-content: flex-end;
+        height: 60px;
+        padding: 15px;
     }
     .content {
-        grid-area: main;
-        grid-column-start: 2;
-        grid-column-end: 3;
         padding-top: 50px;
         text-align: center;
-        border-style: solid;
-        border-color: blue;
     }
-    
-    .country {
-        grid-area: countryline;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        padding: 10px;
-        border-style: solid;
-        border-color: blue;
-
-    }
-    .bottom-menu1 {
-        grid-area: footer;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        padding: px;
-        background-color: #ccc;
-
-    }
-    .bottom-menu2 {
-        grid-area: footer;
-        grid-column-start: 3;
-        grid-column-end: 4;
-        text-align: end;
-        background-color: #ccc;
-        padding: 0px;
-    }
-    .grid-container {
-        font-family: arial,sans-serif;
-        display: grid;
-        border-style: solid;
-        border-color: red;
-        grid-gap: 10px;
-        background-color: lightblue;
-        height: 100vh;
-
-        grid-template-areas: 
-        'header header header'
-        'main main main'
-        'countryline countryline countryline'
-        'footer footer footer';
-    }
-    
     .searchfield {
         border-radius: 24px;
-        max-width: 584px;
+        width: 584px;
         height: 44px;
         border: 1px solid #dfe1e5;
     }
+    
+    .country {
+        background-color: #f2f2f2;
+        padding: 15px 30px;
+        border-bottom: 1px solid #dadce0;
+        color: rgba(0,0,0,.54);
+    }
+    .bottom-menu {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f2f2f2;
+    }
+    .bottom-left {
+        padding: 15px;
+    }
+    .bottom-right {
+        padding: 15px;
+    }
 </style>
 </head>
-<body>
-    <div class="grid-container">
-        <div class="topmenu">Top menu</div>
+    <body>
+        <div class="topmenu">
+            <div>Gmail</div>
+            <div>Images</div>
+            <img src="dots.png">
+            <img src="profile.png">
+        </div>
         <div class="content">
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
             
@@ -89,10 +74,20 @@
                 <input type="submit" value="I'm Feeling Lucky">
             </form>
         </div>
-        <a href="" class="country">Finland</a>  
-        <div class="bottom-menu1">Bottom left</div>
-        <div class="bottom-menu2">Bottom right</div>
+        <div class="country">Finland</div>
+        <div class="bottom-menu">
+            <div class="bottom-left">
+                <a href="">About</a>
+                <a href="">Advertising</a>
+                <a href="">Business</a>
+                <a href="">How Search Works</a>
+            </div>
+            <div class="bottom-right">
+                <a href="">Privacy</a>
+                <a href="">Terms</a>
+                <a href="">Settings</a>
+            </div>
         </div>
-    </div>
+        </div>
 </body>
 </html>
