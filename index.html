@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    .topmenu {
+        grid-area: header;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        text-align: end;
+        padding: 10px;
+    }
+    .content {
+        grid-area: main;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding-top: 50px;
+        text-align: center;
+        border-style: solid;
+        border-color: blue;
+    }
+    
+    .country {
+        grid-area: countryline;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding: 10px;
+        border-style: solid;
+        border-color: blue;
+
+    }
+    .bottom-menu1 {
+        grid-area: footer;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding: px;
+        background-color: #ccc;
+
+    }
+    .bottom-menu2 {
+        grid-area: footer;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        text-align: end;
+        background-color: #ccc;
+        padding: 0px;
+    }
+    .grid-container {
+        font-family: arial,sans-serif;
+        display: grid;
+        border-style: solid;
+        border-color: red;
+        grid-gap: 10px;
+        background-color: lightblue;
+        height: 100vh;
+
+        grid-template-areas: 
+        'header header header'
+        'main main main'
+        'countryline countryline countryline'
+        'footer footer footer';
+    }
+    
+    .searchfield {
+        border-radius: 24px;
+        max-width: 584px;
+        height: 44px;
+        border: 1px solid #dfe1e5;
+    }
+</style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="topmenu">Top menu</div>
+        <div class="content">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+            
+            <form>
+                <input class="searchfield" type="search">
+                <br>
+                <img src="search.png">
+                <img src="mic.png">
+                <br>
+                <input type="submit" value="Google Search">
+                <input type="submit" value="I'm Feeling Lucky">
+            </form>
+        </div>
+        <a href="" class="country">Finland</a>  
+        <div class="bottom-menu1">Bottom left</div>
+        <div class="bottom-menu2">Bottom right</div>
+        </div>
+    </div>
+</body>
+</html>
