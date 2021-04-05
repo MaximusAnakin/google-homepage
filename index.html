@@ -9,20 +9,31 @@
         font-family: arial,sans-serif;
         color: #222;
         text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
     }
     a {
         text-decoration: none;
         color: #70757a;
         padding: 15px;
     }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-between;
+        
+    }
     .topmenu {
         display: flex;
         justify-content: flex-end;
-        height: 60px;
         padding: 15px;
+        font-size: 13px;
+
+       
+    }
+    .topcontent {
+        display: flex;
+        justify-content: space-between;
+        height: 32px;
     }
     .content {
         padding-top: 50px;
@@ -34,32 +45,31 @@
         height: 44px;
         border: 1px solid #dfe1e5;
     }
-    
     .country {
         background-color: #f2f2f2;
         padding: 15px 30px;
         border-bottom: 1px solid #dadce0;
         color: rgba(0,0,0,.54);
+                
     }
     .bottom-menu {
         display: flex;
         justify-content: space-between;
         background-color: #f2f2f2;
-    }
-    .bottom-left {
         padding: 15px;
     }
-    .bottom-right {
-        padding: 15px;
-    }
+
 </style>
 </head>
-    <body>
+<body>
+    <div class="flex-container">
         <div class="topmenu">
-            <div>Gmail</div>
-            <div>Images</div>
-            <img src="dots.png">
-            <img src="profile.png">
+            <div class="topcontent">
+                <div>Gmail</div>
+                <div>Images</div>
+                <img src="dots.png">
+                <img src="profile.png">
+            </div>
         </div>
         <div class="content">
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
@@ -76,18 +86,19 @@
         </div>
         <div class="country">Finland</div>
         <div class="bottom-menu">
-            <div class="bottom-left">
+            <div>
                 <a href="">About</a>
                 <a href="">Advertising</a>
                 <a href="">Business</a>
                 <a href="">How Search Works</a>
             </div>
-            <div class="bottom-right">
+            <div>
                 <a href="">Privacy</a>
                 <a href="">Terms</a>
                 <a href="">Settings</a>
             </div>
         </div>
         </div>
+    </div>
 </body>
 </html>
