@@ -20,37 +20,45 @@
         flex-direction: column;
         height: 100vh;
         justify-content: space-between;
-        
     }
     .topmenu {
         display: flex;
         justify-content: flex-end;
         padding: 15px;
         font-size: 13px;
-
-       
     }
     .topcontent {
         display: flex;
         justify-content: space-between;
         height: 32px;
     }
-    .content {
-        padding-top: 50px;
+    .maincontent {
+        padding-top: 100px;
         text-align: center;
     }
-    .searchfield {
+    .search-wrapper {
+        display: flex;
         border-radius: 24px;
         width: 584px;
         height: 44px;
         border: 1px solid #dfe1e5;
+    }
+    .magnifying-glass{
+        padding: 0.5rem;
+    }
+    .searchfield {
+        flex: 1;
+        border: 0px solid #dfe1e5;
+    }
+    .mic {
+        padding: 0.5rem;
     }
     .country {
         background-color: #f2f2f2;
         padding: 15px 30px;
         border-bottom: 1px solid #dadce0;
         color: rgba(0,0,0,.54);
-                
+        margin-top: auto;
     }
     .bottom-menu {
         display: flex;
@@ -71,18 +79,15 @@
                 <img src="profile.png">
             </div>
         </div>
-        <div class="content">
+        <div class="maincontent">
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-            
-            <form>
-                <input class="searchfield" type="search">
-                <br>
-                <img src="search.png">
-                <img src="mic.png">
-                <br>
-                <input type="submit" value="Google Search">
-                <input type="submit" value="I'm Feeling Lucky">
-            </form>
+            <div class="search-wrapper">
+                <img src="search.png" class="magnifying-glass">
+                <input class="searchfield" type="text">
+                <img src="mic.png" class="mic">
+            </div>
+            <input type="submit" value="Google Search">
+            <input type="submit" value="I'm Feeling Lucky">
         </div>
         <div class="country">Finland</div>
         <div class="bottom-menu">
